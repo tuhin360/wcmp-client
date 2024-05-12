@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/XDscWqn/Default-Quilted-Puffer-Vest-0.jpg",
+    "title": "Fleece-lined Hooded",
+    "category": "Jackets",
+    "size": ["S,", " M,", " L,", " XL"]
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/3RqGvnH/Chunky-Knit.jpg",
+    "title": "Turtleneck Sweater",
+    "category": "Sweaters",
+    "size": ["XS,", " S,", " M,", " L"]
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/Xt1f0hr/Long-Wool-Blend-Coat-Coats-2.jpg",
+    "title": "Long Wool Blend Coat",
+    "category": "Coats",
+    "size": ["S,", " M,", " L"]
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/x3PRBR5/Waterproof-Ski-Gloves.jpg",
+    "title": "Waterproof Ski Gloves",
+    "category": "Gloves",
+    "size": ["S,", " M,", " L"]
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/Sn6H6SC/Insulated-Snow-Boots.jpg",
+    "title": "Insulated Snow Boots",
+    "category": "Boots",
+    "size": ["US 6", "US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/KbSvg7r/Default-Cashmere-Scarf-1.jpg",
+    "title": "Cashmere Scarf",
+    "category": "Scarves",
+    "size": ["One Size"]
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/3YXwWtv/Pom-Pom-Beanie-hat-3.jpg",
+    "title": "Pom Pom Beanie",
+    "category": "Hats",
+    "size": ["One Size"]
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/V90gbYc/Default-Quilted-Puffer-Vest-2.jpg",
+    "title": "Quilted Puffer Vest",
+    "category": "Vests",
+    "size": ["XS", "S", "M"]
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/JFfSd6G/Default-Fleecelined-Leggings-2.jpg",
+    "title": "Fleece-lined Leggings",
+    "category": "Leggings",
+    "size": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/whQszNd/Default-Merino-Wool-Thermal-Socks.jpg",
+    "title": "Merino Wool Thermal Socks",
+    "category": "Socks",
+    "size": ["One Size"]
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co/WgpjRZ3/Insulated-Snow-Pants.jpg",
+    "title": "Insulated Snow Pants",
+    "category": "Pants",
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co/TWz6xWR/Default-Knitted-Shawl-Wrap-2.jpg",
+    "title": "Knitted Shawl Wrap",
+    "category": "Shawls",
+    "size": ["One Size"]
+  }
+]

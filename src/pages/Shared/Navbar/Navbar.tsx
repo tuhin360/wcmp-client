@@ -1,4 +1,4 @@
-import logo from "../../../assets/images/logo/logo.png";
+
 
 interface MenuItem {
   label: string;
@@ -36,10 +36,10 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="navbar  fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
+    <div className="navbar   fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
       <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div className="dropdown ">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -66,8 +66,8 @@ const Navbar: React.FC = () => {
           WCMP
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center  hidden lg:flex">
+        <ul className=" menu menu-horizontal px-1">
           {generateMenuItems(menuOptions)}
         </ul>
       </div>
