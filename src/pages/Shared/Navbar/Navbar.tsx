@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
 
 
 interface MenuItem {
   label: string;
+  route: string;
   submenu?: string[];
 }
 
 const Navbar: React.FC = () => {
   const menuOptions: MenuItem[] = [
-    { label: "Home" },
-    { label: "Winter Clothes" },
-    { label: "Dashboard" },
-    { label: "About Us" },
-    { label: "Blog" },
+    { label: "Home", route: '/' },
+    { label: "Winter Clothes", route: "/winter-clothes" },
+    { label: "Dashboard", route: "/dashboard" },
+    { label: "About Us", route: "/about-us"},
+    { label: "Blog", route: "/blog"},
   ];
 
   const generateMenuItems = (options: MenuItem[]) => {
@@ -29,7 +31,7 @@ const Navbar: React.FC = () => {
             </ul>
           </details>
         ) : (
-          <a>{option.label}</a>
+          <Link to={option.route} className="">{option.label}</Link>
         )}
       </li>
     ));
@@ -62,20 +64,18 @@ const Navbar: React.FC = () => {
             {generateMenuItems(menuOptions)}
           </ul>
         </div>
-        <a href="#" className="btn btn-ghost text-xl">
+        <Link to="/" className="btn btn-ghost text-xl">
           WCMP
-        </a>
+        </Link>
       </div>
       <div className="navbar-center  hidden lg:flex">
         <ul className=" menu menu-horizontal px-1">
           {generateMenuItems(menuOptions)}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a href="#" className="btn">
-          Button
-        </a>
-      </div>
+      <Link to="/login" className="navbar-end btn btn-ghost text-xl">
+         Login
+      </Link>
     </div>
   );
 };

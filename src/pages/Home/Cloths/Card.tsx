@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Card = ({ cloth }) => {
-  const { image, title, category, size } = cloth;
+  const { _id, image, title, category, size } = cloth;
   return (
     <div>
       <img className="rounded-lg p-3 md:p-0 " src={image} alt="" />
@@ -11,9 +13,11 @@ const Card = ({ cloth }) => {
         <p>
           <span className="font-semibold">Size:</span> {size}
         </p>
-        <button className="p-3 rounded-md text-white my-3 bg-gray-500    hover:bg-gray-700">
-          View Details
-        </button>
+        <Link to={`/cloth/${_id}`}>
+          <button className="p-3 rounded-md text-white my-3 bg-gray-500    hover:bg-gray-700">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );
