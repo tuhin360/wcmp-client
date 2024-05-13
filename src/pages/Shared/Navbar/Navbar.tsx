@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 interface MenuItem {
   label: string;
@@ -8,12 +8,15 @@ interface MenuItem {
 }
 
 const Navbar: React.FC = () => {
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const location = useLocation();
+
   const menuOptions: MenuItem[] = [
-    { label: "Home", route: '/' },
-    { label: "Winter Clothes", route: "/winter-clothes" },
+    { label: "Home", route: "/" },
+    { label: "All Winter Clothes", route: "/all-winter-cloth" },
     { label: "Dashboard", route: "/dashboard" },
-    { label: "About Us", route: "/about-us"},
-    { label: "Blog", route: "/blog"},
+    { label: "About Us", route: "/about-us" },
+    { label: "Blog", route: "/blog" },
   ];
 
   const generateMenuItems = (options: MenuItem[]) => {
@@ -22,7 +25,7 @@ const Navbar: React.FC = () => {
         {option.submenu ? (
           <details>
             <summary>{option.label}</summary>
-            <ul className="p-2">
+            <ul className="p-2 ">
               {option.submenu.map((subItem, subIndex) => (
                 <li key={subIndex}>
                   <a>{subItem}</a>
@@ -31,14 +34,20 @@ const Navbar: React.FC = () => {
             </ul>
           </details>
         ) : (
-          <Link to={option.route} className="">{option.label}</Link>
+          <Link
+            to={option.route}
+            className={option.route === activeItem ? "active" : ""}
+            onClick={() => setActiveItem(option.route)}
+          >
+            {option.label}
+          </Link>
         )}
       </li>
     ));
   };
 
   return (
-    <div className="navbar   fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
+    <div className="navbar fixed z-10 bg-opacity-70 md:bg-opacity-30 bg-black text-white max-w-screen-xl mb-20">
       <div className="navbar-start">
         <div className="dropdown ">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden ">
@@ -57,25 +66,30 @@ const Navbar: React.FC = () => {
               />
             </svg>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
+          <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 bg-opacity-90 bg-black">
             {generateMenuItems(menuOptions)}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl">
+        <Link
+          to="/"
+          className=" text-xl ml-2 hover:bg-opacity-30 hover:bg-black p-2 rounded-md transition"
+        >
           WCMP
         </Link>
       </div>
       <div className="navbar-center  hidden lg:flex">
-        <ul className=" menu menu-horizontal px-1">
+        <ul className=" menu menu-horizontal px-1 ">
           {generateMenuItems(menuOptions)}
         </ul>
       </div>
-      <Link to="/login" className="navbar-end btn btn-ghost text-xl">
-         Login
-      </Link>
+      <div className="navbar-end">
+        <Link
+          to="/login"
+          className="ml-10 text-xl mr-3 hover:bg-opacity-30 hover:bg-black p-2 rounded-md transition"
+        >
+          Login
+        </Link>
+      </div>
     </div>
   );
 };

@@ -17,8 +17,6 @@ const Cloths = () => {
       .catch((err) => console.log(err));
   }, []);
 
-
-
   const handleViewAllClick = () => {
     setShowAllCloths(true); // Set showAllCloths state to true when "View All" button is clicked
   };

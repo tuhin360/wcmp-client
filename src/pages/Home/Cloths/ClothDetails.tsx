@@ -12,7 +12,7 @@ interface Cloth {
 
 const ClothDetails = () => {
   const { id } = useParams(); // Extract the cloth ID from the URL
-  const [cloth, setCloth] = useState<Cloth | null>(null); 
+  const [cloth, setCloth] = useState<Cloth | null>(null);
 
   useEffect(() => {
     // Fetch cloth details based on the ID
@@ -34,31 +34,26 @@ const ClothDetails = () => {
   }
 
   return (
-    <div>
-      <div>
-        <div className="flex flex-col md:flex-row gap-8 ">
-          <div className="md:w-1/2 md:my-28 mt-20 p-4 md:p-0">
-            <img src={cloth.image} alt={cloth.title} className="rounded-lg" />
-          </div>
-          <div className="md:w-1/2 md:my-28 text-center">
-            <h3 className="text-lg font-bold mb-2">{cloth.title}</h3>
-            <p className="mb-2">
-              <span className="font-semibold">Category:</span> {cloth.category}
-            </p>
-            <p className="mb-2">
-              <span className="font-semibold">Size:</span>{" "}
-              {cloth.size.join(", ")}
-            </p>
-            <p className="mb-2">
-              <span className="font-semibold ">Description:</span>{" "}
-              {cloth.description}
-            </p>
-            <div className="mb-10">
-              <button className="p-3 rounded-md text-white my-3 bg-gray-500    hover:bg-gray-700">
-                Donate Now
-              </button>
-            </div>
-          </div>
+    <div className="flex flex-col md:flex-row gap-8 ">
+      <div className="md:w-1/2 md:my-28 mt-20 p-4 md:p-0">
+        <img src={cloth.image} alt={cloth.title} className="rounded-lg" />
+      </div>
+      <div className="md:w-1/2 md:my-28  text-center md:text-left">
+        <h3 className="text-lg font-bold mb-2">{cloth.title}</h3>
+        <p className="mb-2">
+          <span className="font-semibold">Category:</span> {cloth.category}
+        </p>
+        <p className="mb-2">
+          <span className="font-semibold">Size:</span> {cloth.size.join(", ")}
+        </p>
+        <p className="mb-2">
+          <span className="font-semibold ">Description:</span>{" "}
+          {cloth.description}
+        </p>
+        <div className="mb-10">
+          <button className="p-3 rounded-md text-white my-3 bg-orange-600    hover:bg-gray-700">
+            Donate Now
+          </button>
         </div>
       </div>
     </div>
