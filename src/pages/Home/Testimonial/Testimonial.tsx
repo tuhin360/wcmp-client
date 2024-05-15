@@ -10,8 +10,8 @@ import { Pagination } from "swiper/modules";
 
 const Testimonial = () => {
   return (
-    <div className="mb-32">
-      <h2 className="text-3xl mt-0 md:mt-48 font-bold text-center">
+    <div className="my-32">
+      <h2 className="text-3xl mt-0 font-bold text-center">
         What Our Client Say
       </h2>
       <Swiper

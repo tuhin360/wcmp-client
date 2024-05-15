@@ -4,8 +4,10 @@ import reward from "../../../assets/images/home/howWork/reward.png";
 
 const HowWork = () => {
   return (
-    <div className="my-16">
-      <h2 className="text-center text-2xl mb-8">HOW WE WORK</h2>
+    <div className="my-32">
+      <h2 className="text-3xl mb-10 md:mb-16 font-bold text-center ">
+        HOW WE WORK
+      </h2>
       <div className="container mx-auto grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="flex flex-col items-center">
           <img
@@ -46,8 +48,8 @@ const HowWork = () => {
           />
           <h4 className="text-center text-xl mt-3">Get Rewards</h4>
           <p className="p-5 ">
-            Our brand partners provide our donors gifts as a gesture of
-            thanks for making a difference. Be ready to get surprised!
+            Our brand partners provide our donors gifts as a gesture of thanks
+            for making a difference. Be ready to get surprised!
           </p>
         </div>
       </div>

@@ -7,8 +7,8 @@ const ServiceCounter = () => {
   const [counterOn, setCounterOn] = useState(false);
 
   return (
-    <div className="mb-16 md:mb-0">
-      <h2 className="text-3xl   md:mt-32 font-bold text-center ">
+    <div className="my-32 md:mb-0">
+      <h2 className="text-3xl   font-bold text-center ">
         Our Services
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 bg-slate-300 p-20 mt-10 text-center service-counter-bg rounded-md">

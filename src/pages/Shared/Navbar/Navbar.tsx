@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-
+import '../../../styles/Home/Navbar.css'
 interface MenuItem {
   label: string;
   route: string;
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
         </div>
         <Link
           to="/"
-          className=" text-xl ml-2 hover:bg-opacity-30 hover:bg-black p-2 rounded-md transition"
+          className="logo-text text-xl ml-2 hover:bg-opacity-30 hover:bg-black p-2 rounded-md transition"
         >
           WCMP
         </Link>

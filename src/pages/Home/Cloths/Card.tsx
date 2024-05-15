@@ -14,7 +14,7 @@ const Card = ({ cloth }) => {
           <span className="font-semibold">Size:</span> {size}
         </p>
         <Link to={`/cloth/${_id}`}>
-          <button className="p-3 rounded-md text-white my-3 bg-gray-500    hover:bg-gray-700">
+          <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-gray-400 transition duration-300">
             View Details
           </button>
         </Link>

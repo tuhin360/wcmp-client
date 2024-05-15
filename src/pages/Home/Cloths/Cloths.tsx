@@ -3,12 +3,11 @@ import Card from "./Card";
 
 interface Cloth {
   id: number;
-  // Define other properties of Cloth here
 }
 
 const Cloths = () => {
   const [cloths, setCloths] = useState<Cloth[]>([]);
-  const [showAllCloths, setShowAllCloths] = useState(false); // State variable to track whether to show all cloths or not
+  const [showAllCloths, setShowAllCloths] = useState(false); 
 
   useEffect(() => {
     fetch("http://localhost:5000/cloths")
@@ -18,13 +17,15 @@ const Cloths = () => {
   }, []);
 
   const handleViewAllClick = () => {
-    setShowAllCloths(true); // Set showAllCloths state to true when "View All" button is clicked
+    setShowAllCloths(true);  
   };
 
   return (
-    <div>
-      <h2 className="text-center text-2xl mb-8">Winter Clothes</h2>
-      <div className="pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    <div className="my-32">
+      <h2 className="text-3xl mb-10 md:mb-16 font-bold text-center ">
+        Winter Clothes
+      </h2>
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {showAllCloths
           ? cloths.map((cloth) => <Card key={cloth.id} cloth={cloth} />)
           : cloths
@@ -34,7 +35,7 @@ const Cloths = () => {
       {!showAllCloths && (
         <div className="text-center my-10">
           <button
-            className="py-3 px-10 text-2xl rounded-md text-white my-1 bg-gray-500 hover:bg-gray-700"
+            className=" bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-gray-400 transition duration-300"
             onClick={handleViewAllClick}
           >
             View All

@@ -1,15 +1,13 @@
 .testimonial-box {
-  /* background: rgb(2, 0, 36);
+  background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
     rgb(80, 80, 93) 0%,
     rgb(163, 148, 157) 37%,
     rgb(195, 188, 205) 62%,
     rgb(218, 224, 225) 100%
-  ); */
+  );
 
-  background-image: url("https://images.unsplash.com/photo-1515339760107-1952b7a08454?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
+  
 
 }

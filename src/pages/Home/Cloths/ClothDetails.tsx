@@ -11,11 +11,10 @@ interface Cloth {
 }
 
 const ClothDetails = () => {
-  const { id } = useParams(); // Extract the cloth ID from the URL
+  const { id } = useParams();
   const [cloth, setCloth] = useState<Cloth | null>(null);
 
   useEffect(() => {
-    // Fetch cloth details based on the ID
     const fetchClothDetails = async () => {
       try {
         const response = await fetch(`http://localhost:5000/cloths/${id}`);
@@ -51,7 +50,7 @@ const ClothDetails = () => {
           {cloth.description}
         </p>
         <div className="mb-10">
-          <button className="p-3 rounded-md text-white my-3 bg-orange-600    hover:bg-gray-700">
+          <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-gray-400 transition duration-300">
             Donate Now
           </button>
         </div>
