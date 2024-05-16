@@ -47,7 +47,7 @@ const ServiceCounter = () => {
               <CountUp start={0} end={counterOn ? 500 : 0} duration={2} />
               <span>K</span>
             </h3>
-            <p className="font-semibold">Happy Man</p>
+            <p className="font-semibold">Happy Men</p>
           </div>
         </ScrollTrigger>
       </div>

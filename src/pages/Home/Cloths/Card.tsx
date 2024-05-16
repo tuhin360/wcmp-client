@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+interface Cloth {
+  _id: number;
+  image: string;
+  title: string;
+  category: string;
+  size: string;
+}
+interface CardProps {
+  cloth: Cloth;
+}
 
-const Card = ({ cloth }) => {
+const Card: React.FC<CardProps> = ({ cloth }) => {
   const { _id, image, title, category, size } = cloth;
   return (
     <div>

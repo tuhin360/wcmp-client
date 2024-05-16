@@ -1,23 +1,35 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "./Card";
+import { useQuery } from "@tanstack/react-query";
 
 interface Cloth {
-  id: number;
+  _id: number;
+  image: string;
+  title: string;
+  category: string;
+  size: string;
 }
 
 const Cloths = () => {
-  const [cloths, setCloths] = useState<Cloth[]>([]);
-  const [showAllCloths, setShowAllCloths] = useState(false); 
+  const [showAllCloths, setShowAllCloths] = useState(false);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/cloths")
-      .then((res) => res.json())
-      .then((data) => setCloths(data))
-      .catch((err) => console.log(err));
-  }, []);
+  const getCloths = async () => {
+    return await fetch("http://localhost:5000/cloths").then((res) =>
+      res.json()
+    );
+  };
+
+  const { data, isLoading } = useQuery<Cloth[]>({
+    queryKey: ["cloths"],
+    queryFn: getCloths,
+  });
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   const handleViewAllClick = () => {
-    setShowAllCloths(true);  
+    setShowAllCloths(true);
   };
 
   return (
@@ -27,10 +39,10 @@ const Cloths = () => {
       </h2>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {showAllCloths
-          ? cloths.map((cloth) => <Card key={cloth.id} cloth={cloth} />)
-          : cloths
-              .slice(0, 6)
-              .map((cloth) => <Card key={cloth.id} cloth={cloth} />)}
+          ? data?.map((cloth) => <Card key={cloth._id} cloth={cloth} />)
+          : data
+              ?.slice(0, 6)
+              .map((cloth) => <Card key={cloth._id} cloth={cloth} />)}
       </div>
       {!showAllCloths && (
         <div className="text-center my-10">
